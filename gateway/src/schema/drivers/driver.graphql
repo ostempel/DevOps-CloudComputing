@@ -1,0 +1,32 @@
+type Driver {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  birthDate: DateTime!
+  country: String!
+}
+
+input CreateDriverInput {
+  firstName: String!
+  lastName: String!
+  birthDate: DateTime!
+  country: String!
+}
+
+input UpdateDriverInput {
+  firstName: String
+  lastName: String
+  birthDate: DateTime
+  country: String
+}
+
+extend type Query {
+  drivers: [Driver]
+  driver(id: Int!): Driver
+}
+
+extend type Mutation {
+  createDriver(data: CreateDriverInput!): Driver
+  updateDriver(id: Int!, data: UpdateDriverInput!): Driver
+  deleteDriver(id: Int!): Driver
+}

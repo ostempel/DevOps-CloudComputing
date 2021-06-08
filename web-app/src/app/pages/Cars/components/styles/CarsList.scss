@@ -1,0 +1,35 @@
+.carslist {
+  margin: 0;
+  background-color: rgb(77, 77, 77);
+  width: 70%;
+  padding: 2em 1em;
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__error {
+    color: red;
+    justify-content: center;
+    align-items: center;
+    font-size: 25pt;
+  }
+
+  &__empty {
+    color: red;
+    text-align: center;
+    font-size: 25pt;
+  }
+
+  &__headline {
+    font-size: 35pt;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  &__item:last-child {
+    margin: 0;
+  }
+}

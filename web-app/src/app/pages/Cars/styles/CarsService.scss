@@ -1,0 +1,27 @@
+.carsservice {
+  margin: 0;
+  min-width: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__headline {
+    font-size: 35pt;
+    text-align: center;
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__content {
+    margin: 0.25em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

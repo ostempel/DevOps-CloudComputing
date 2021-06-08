@@ -1,0 +1,112 @@
+version: "3.7"
+
+networks:
+  project-network:
+
+services:
+  service-cars:
+    build:
+      context: "./service-cars"
+      target: builder
+    command: "yarn start:debug"
+    ports:
+      - "3001:3001"
+      - "9230:9229"
+    volumes:
+      - ./service-cars:/usr/src/app
+    networks:
+      - project-network
+    depends_on:
+      - database-cars
+    container_name: service-cars
+
+  service-drivers:
+    build:
+      context: "./service-drivers"
+      target: builder
+    command: "yarn start:debug"
+    ports:
+      - "3002:3001"
+      - "9231:9229"
+    volumes:
+      - ./service-drivers:/usr/src/app
+    networks:
+      - project-network
+    depends_on:
+      - database-drivers
+    container_name: service-drivers
+
+  service-racetracks:
+    build:
+      context: "./service-racetracks"
+      target: builder
+    command: "yarn start:debug"
+    ports:
+      - "3003:3001"
+      - "9232:9229"
+    volumes:
+      - ./service-racetracks:/usr/src/app
+    networks:
+      - project-network
+    depends_on:
+      - database-racetracks
+    container_name: service-racetracks
+
+  gateway:
+    build:
+      context: "./gateway"
+      target: builder
+    command: "yarn dev"
+    ports:
+      - "4000:4000"
+      - "9229:9229"
+    volumes:
+      - ./gateway:/usr/src/app
+    networks:
+      - project-network
+
+  database-cars:
+    build:
+      context: ./database-cars
+      shm_size: "2gb"
+    shm_size: "2gb"
+    ports:
+      - "8000:5432"
+    volumes:
+      - ./database-cars/db:/db
+    networks:
+      - project-network
+    environment:
+      POSTGRES_USER: project
+      POSTGRES_PASSWORD: project
+      INITIALIZE_DB: "true"
+  database-drivers:
+    build:
+      context: ./database-drivers
+      shm_size: "2gb"
+    shm_size: "2gb"
+    ports:
+      - "8001:5432"
+    volumes:
+      - ./database-drivers/db:/db
+    networks:
+      - project-network
+    environment:
+      POSTGRES_USER: project
+      POSTGRES_PASSWORD: project
+      INITIALIZE_DB: "true"
+  database-racetracks:
+    build:
+      context: ./database-racetracks
+      shm_size: "2gb"
+    shm_size: "2gb"
+    ports:
+      - "8002:5432"
+    volumes:
+      - ./database-racetracks/db:/db
+    networks:
+      - project-network
+    environment:
+      POSTGRES_USER: project
+      POSTGRES_PASSWORD: project
+      INITIALIZE_DB: "true"

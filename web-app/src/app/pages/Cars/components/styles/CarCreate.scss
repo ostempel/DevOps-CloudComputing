@@ -1,0 +1,54 @@
+.carcreate {
+  margin: 0;
+  background-color: rgb(77, 77, 77);
+  width: 70%;
+  padding: 2em 1em;
+
+  &__headline {
+    font-size: 35pt;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__error {
+    color: red;
+    justify-content: center;
+    align-items: center;
+    font-size: 25pt;
+  }
+
+  &__form {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .MuiInputBase-root {
+      color: white;
+    }
+
+    .MuiFormLabel-root {
+      color: white;
+    }
+
+    .MuiInput-underline:after {
+      border-color: white;
+    }
+
+    .MuiInput-underline:before {
+      border-color: white;
+    }
+
+    &__field {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

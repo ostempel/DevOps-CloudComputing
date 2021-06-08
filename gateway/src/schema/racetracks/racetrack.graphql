@@ -1,0 +1,29 @@
+type Racetrack {
+  id: Int!
+  name: String!
+  country: String!
+  length: Int!
+}
+
+input CreateRacetrackInput {
+  name: String!
+  country: String!
+  length: Int!
+}
+
+input UpdateRacetrackInput {
+  name: String
+  country: String
+  length: Int
+}
+
+extend type Query {
+  racetracks: [Racetrack]
+  racetrack(id: Int!): Racetrack
+}
+
+extend type Mutation {
+  createRacetrack(data: CreateRacetrackInput!): Racetrack
+  updateRacetrack(id: Int!, data: UpdateRacetrackInput!): Racetrack
+  deleteRacetrack(id: Int!): Racetrack
+}

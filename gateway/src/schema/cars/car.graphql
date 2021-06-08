@@ -1,0 +1,37 @@
+type Car {
+  id: Int!
+  brand: String!
+  model: String!
+  manufactureYear: DateTime!
+  ps: Int!
+  topSpeed: Int!
+  createdAt: DateTime!
+  modifiedAt: DateTime!
+}
+
+input CreateCarInput {
+  brand: String!
+  model: String!
+  manufactureYear: DateTime!
+  ps: Int!
+  topSpeed: Int!
+}
+
+input UpdateCarInput {
+  brand: String
+  model: String
+  manufactureYear: DateTime
+  ps: Int
+  topSpeed: Int
+}
+
+extend type Query {
+  cars: [Car]
+  car(id: Int!): Car
+}
+
+extend type Mutation {
+  createCar(data: CreateCarInput!): Car
+  updateCar(id: Int!, data: UpdateCarInput!): Car
+  deleteCar(id: Int!): Car
+}

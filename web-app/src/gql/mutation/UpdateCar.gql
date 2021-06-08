@@ -1,0 +1,10 @@
+mutation UpdateCar($id: Int!, $data: UpdateCarInput!) {
+  updateCar(id: $id, data: $data) {
+    id
+    brand
+    model
+    manufactureYear
+    ps
+    topSpeed
+  }
+}

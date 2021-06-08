@@ -1,0 +1,8 @@
+mutation DeleteRacetrack($id: Int!) {
+  deleteRacetrack(id: $id) {
+    id
+    name
+    country
+    length
+  }
+}

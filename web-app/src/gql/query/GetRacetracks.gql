@@ -1,0 +1,8 @@
+query GetRacetracks {
+  racetracks {
+    id
+    name
+    country
+    length
+  }
+}

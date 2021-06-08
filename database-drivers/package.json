@@ -1,0 +1,8 @@
+{
+  "name": "clarify-database",
+  "version": "1.0.0",
+  "description": "Postgress Database for clarify system",
+  "main": "index.js",
+  "author": "Oliver Stempel",
+  "license": "MIT"
+}

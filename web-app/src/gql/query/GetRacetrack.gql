@@ -1,0 +1,8 @@
+query GetRacetrack($id: Int!) {
+  racetrack(id: $id) {
+    id
+    name
+    country
+    length
+  }
+}

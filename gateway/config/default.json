@@ -1,0 +1,10 @@
+{
+  "application": {
+    "port": 4000
+  },
+  "routeMap": {
+    "carsService": "http://service-cars:3001",
+    "driversService": "http://service-drivers:3001",
+    "racetracksService": "http://service-racetracks:3001"
+  }
+}

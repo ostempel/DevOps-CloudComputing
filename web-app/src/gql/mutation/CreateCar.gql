@@ -1,0 +1,10 @@
+mutation CreateCar($data: CreateCarInput!) {
+  createCar(data: $data) {
+    id
+    brand
+    model
+    manufactureYear
+    ps
+    topSpeed
+  }
+}

@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  postgres:
+    build:
+      context: .
+      args:
+        PG_MAJOR: '13'
+    ports:
+      - '8000:5432'
+    volumes:
+      - ./db:/db
+    environment:
+      POSTGRES_USER: project
+      POSTGRES_PASSWORD: project
+      INITIALIZE_DB: 'true'

@@ -1,0 +1,9 @@
+mutation UpdateDriver($id: Int!, $data: UpdateDriverInput!) {
+  updateDriver(id: $id, data: $data) {
+    id
+    firstName
+    lastName
+    birthDate
+    country
+  }
+}

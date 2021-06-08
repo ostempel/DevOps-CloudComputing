@@ -1,0 +1,12 @@
+query GetCar($id: Int!) {
+  car(id: $id) {
+    id
+    brand
+    model
+    manufactureYear
+    ps
+    topSpeed
+    createdAt
+    modifiedAt
+  }
+}

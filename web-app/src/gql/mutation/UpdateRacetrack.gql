@@ -1,0 +1,8 @@
+mutation UpdateRacetrack($id: Int!, $data: UpdateRacetrackInput!) {
+  updateRacetrack(id: $id, data: $data) {
+    id
+    name
+    country
+    length
+  }
+}

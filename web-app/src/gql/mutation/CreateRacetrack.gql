@@ -1,0 +1,8 @@
+mutation CreateRacetrack($data: CreateRacetrackInput!) {
+  createRacetrack(data: $data) {
+    id
+    name
+    country
+    length
+  }
+}

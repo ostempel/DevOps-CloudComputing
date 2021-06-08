@@ -1,0 +1,9 @@
+query GetDriver($id: Int!) {
+  driver(id: $id) {
+    id
+    firstName
+    lastName
+    birthDate
+    country
+  }
+}

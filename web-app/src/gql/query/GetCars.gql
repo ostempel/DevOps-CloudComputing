@@ -1,0 +1,12 @@
+query GetCars {
+  cars {
+    id
+    brand
+    model
+    manufactureYear
+    ps
+    topSpeed
+    createdAt
+    modifiedAt
+  }
+}

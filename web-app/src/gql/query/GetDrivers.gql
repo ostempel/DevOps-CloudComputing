@@ -1,0 +1,9 @@
+query GetDrivers {
+  drivers {
+    id
+    firstName
+    lastName
+    birthDate
+    country
+  }
+}

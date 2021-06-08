@@ -1,0 +1,51 @@
+.homePage {
+  margin: 0;
+  min-width: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__headline {
+    font-size: 30pt;
+    text-align: end;
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__paper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+      background-color: rgb(77, 77, 77);
+      text-align: center;
+      padding: 3em 1.5em;
+      width: 70%;
+
+      &__headline {
+        font-size: 25pt;
+      }
+
+      &__servicelink {
+        color: white;
+        margin-top: 1em;
+        text-align: start;
+        &__icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        a {
+          font-size: 20pt;
+          color: white;
+        }
+      }
+    }
+  }
+}
