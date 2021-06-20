@@ -24,7 +24,7 @@ Es werden verschiedene Technologien benötigt:
 In jedes Root-Verzeichnis einer Komponente (außer Datenbanken) per CLI gehen und die packages installieren.
 Bsp.: Cars-service
 
-```
+```bash
 cd service-cars
 yarn install
 ```
@@ -35,12 +35,12 @@ yarn install
 
 In das Root-Verzeichnis des Projekt per CLI gehen und die Umgebung per docker-compose bauen und starten.
 
-```
+```bash
 docker-compose up --build
 ```
 
 Das Frontend wird native auf dem lokalen Betriebssystem gestartet. Dadurch ist der Hot-Reload von React schneller und optimiert den Entwicklungsprozess. Im Root-Verzeichnis des Frontends:
 
-```
+```bash
 yarn start
 ```
