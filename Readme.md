@@ -38,3 +38,9 @@ In das Root-Verzeichnis des Projekt per CLI gehen und die Umgebung per docker-co
 ```
 docker-compose up --build
 ```
+
+Das Frontend wird native auf dem lokalen Betriebssystem gestartet. Dadurch ist der Hot-Reload von React schneller und optimiert den Entwicklungsprozess. Im Root-Verzeichnis des Frontends:
+
+```
+yarn start
+```
